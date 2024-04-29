@@ -18,13 +18,13 @@ class AboutUsDelete(generics.DestroyAPIView):
 #ContactViews
 
 class ContactsAdd(generics.CreateAPIView):
-    queryset = Contact.objects.all()
+    queryset = Contacts.objects.all()
     serializer_class = ContactsSerializer
     
 class ContactsUpdate(generics.UpdateAPIView):
-    queryset = Contact.objects.all()
+    queryset = Contacts.objects.all()
     serializer_class = ContactsSerializer
 
-class ContactsDelete(generics.DeleteAPIView):
-    queryset = Contact.objects.all()
+class ContactsDelete(generics.DestroyAPIView):
+    queryset = Contacts.objects.all()
     serializer_class = ContactsSerializer

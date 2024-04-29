@@ -8,9 +8,9 @@ class AboutUsSerializer(serializers.ModelSerializer):
         model = AboutUs
         fields = ['title', 'description']
 
-class ContactSerializer(serializer.ModelSerializer):
+class ContactsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Contact
+        model = Contacts
         fields = '__all__'
         
     

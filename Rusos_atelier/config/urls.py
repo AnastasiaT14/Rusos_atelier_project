@@ -5,4 +5,7 @@ urlpatterns = [
     path('aboutus/add/', views.AboutUsAdd.as_view(), name='about_us-add'),
     path('aboutus/<int:pk>/', views.AboutUsUpdate.as_view(), name='about_us-update'),
     path('aboutus/<int:pk>/', views.AboutUsDelete.as_view(), name='about_us-delete'),
+    path('contacts/add/', views.ContactsAdd.as_view(), name='contacts-add'),
+    path('contacts/<int:pk>/update/', views.ContactsUpdate.as_view(), name='contacts-update'),
+    path('contacts/<int:pk>/delete/', views.ContactsDelete.as_view(), name='contacts-delete'),
 ]
