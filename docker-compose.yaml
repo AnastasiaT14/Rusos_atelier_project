@@ -1,32 +1,24 @@
 version: "3.7"
 
 services:
-  backend:
+  rusos_atelier:
     volumes:
       - static:/static
     env_file:
       - .env
     build:
-      context: ./backend
+      context: ./rusos_atelier
     ports:
       - "8000:8000"
-  frontend:
-    build:
-      context: ./frontend
-    volumes:
-      - frontend:/app/build
+
   nginx:
-    build:
-      context: ./nginx
+    build: ./nginx
     volumes:
       - static:/static
-      - frontend:/var/www/frontend
     ports:
       - "80:80"
     depends_on:
-      - backend
-      - frontend
+      - rusos_atelier
 
 volumes:
   static:
-  frontend:
